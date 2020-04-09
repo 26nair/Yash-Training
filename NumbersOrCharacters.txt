@@ -1,0 +1,13 @@
+arraylist=[5,'a','b',2,15,'r',40,'c',46];
+newArrayList=[];
+//console.log(arraylist);
+var varType;
+for (i = 0; i < arraylist.length; i++){
+//console.log(typeof (arraylist[i]));
+if (typeof(arraylist[i]) === 'number'){
+newArrayList.push(arraylist[i]);
+console.log(newArrayList);
+}
+
+}
+  

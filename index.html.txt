@@ -1,0 +1,10 @@
+<div >
+        <h2>Add two textbox values without pressing anybuttons</h2>
+     <label>FirstName</label>
+     <input type="text" id="fname" name="fname" ><br>
+     <label>LastName</label>
+        <input type="text" id="lname" name="lname" ><br>
+        <br />
+         <button type="button" onclick="concatenate();">Get Value</button>
+          
+        </div>

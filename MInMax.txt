@@ -1,0 +1,19 @@
+arraylist=[5,10,4,2,15,75,40,81,46]
+var x= arraylist.length;
+
+//console.log(arraylist[]);
+var text = "";
+var i;
+var j;
+var maxVal=0;
+var minVal=100;
+
+for (i = 0; i < arraylist.length; i++) {
+    maxVal= (Math.max(maxVal,arraylist[i]));
+    minVal= (Math.min(minVal,arraylist[i]));
+      }
+     
+  console.log(maxVal);
+  console.log(minVal);
+  
+ 

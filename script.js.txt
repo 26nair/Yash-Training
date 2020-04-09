@@ -1,0 +1,9 @@
+
+        function getStudentNames(arrofNames) {
+         var opArray = [];
+         for(i = 0; i< arrofNames.length; i++){
+           opArray.push(arrofNames[i]['Name'])
+         }
+         alert(opArray)
+        }
+    

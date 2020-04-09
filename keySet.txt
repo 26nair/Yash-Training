@@ -1,0 +1,17 @@
+function hashKey(set, key){
+set = {a:1, b:2};
+key = 'f';
+var isFound = false;
+
+for (k in set){
+  if (k == key){
+    isFound = true;
+    break;
+  }
+}
+if(!isFound){
+  alert(key + ": Key not Found");
+}else{
+  alert(key + ": Key Found ");
+}
+}
