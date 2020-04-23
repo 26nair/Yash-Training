@@ -1,0 +1,68 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import NumbersComponent from './NumbersComponent';     
+import NameComponent from './NameComponent';
+import CustomerComponent from './CustomerComponent';
+import * as serviceWorker from './serviceWorker';
+
+
+// var NumList=[12,31,22,54,16,29,41,8,34,89];
+ReactDOM.render(<CustomerComponent/> ,document.getElementById('root')
+);
+
+
+serviceWorker.unregister();
+
+
+
+
+import React from 'react';
+import ShowCustomerComponent from './ShowCustomerComponent';
+
+class CustomerComponent extends React.Component{
+    render(){
+        var Customer=[
+            {id:"001",name:"Raj",address:"New Delhi"},
+            {id:"002",name:"Raju",address:"Mumbai"},
+            {id:"003",name:"Raj",address:"India"}
+        ];
+        return(
+            <div>
+              <ShowCustomerComponent customerList={Customer}/>
+            </div>
+        )
+    }
+}
+export default CustomerComponent;
+
+
+
+
+import React from 'react';
+class ShowCustomerComponent extends React.Component{
+
+    render(){
+
+        return(
+        <div>
+<h1>{this.props.customerList.filter(function(customer){
+
+    return (customer.name.startsWith("R") &&  customer.address =="India");
+}).map(function(customer){
+    
+return <p>Customer Id:{customer.id}   <br></br>
+           Customer Name:{customer.name}  <br></br>
+                Customer Address:{customer.address}<br></br>
+</p>;
+
+})}
+
+</h1>
+
+        </div>
+        )
+    }
+}
+export default ShowCustomerComponent;

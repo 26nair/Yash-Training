@@ -1,0 +1,81 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import NumbersComponent from './NumbersComponent';     
+import NameComponent from './NameComponent';
+import LogoComponent from './LogoComponent';
+import * as serviceWorker from './serviceWorker';
+
+var Customer=[
+    {id:"001",name:"Raj",Address:"New Delhi"},
+    {id:"002",name:"Raju",Address:"Mumbai"}
+];  
+
+// var NumList=[12,31,22,54,16,29,41,8,34,89];
+ReactDOM.render(<LogoComponent/> ,document.getElementById('root')
+);
+
+
+serviceWorker.unregister();
+
+
+
+
+
+import React from 'react';
+class LogoComponent extends React.Component{
+
+    render(){
+        return(<div>
+            <div id="header">
+                <div id="logo">Logo</div>  
+                <div id="navigation">
+                   <a href="#">Home</a>|
+                   <a href="#">About</a>|
+                   <a href="#">Service</a>| 
+                   <a href="#">Contact</a>
+                    
+                </div>              
+            </div>
+            <div id="search-form">
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text"/>&nbsp;
+                            <button type="submit">Search</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div id="data-table">
+                <table border="1">
+                    <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>scrum master</th>
+                    <th>Team members</th>
+                    </tr>
+
+                    <tr>
+                    <td>101</td>
+                    <td>TCI</td>
+                    <td>John</td>
+                    <td>12</td>
+                    </tr>
+                    <td>
+                        <tr><a href="#">Edit</a>|
+                        <a href="#">Delete</a>
+                        </tr>
+                    </td>
+                    </table> 
+
+
+            </div>
+            </div>
+            </div>
+        )
+    }
+}
+export default LogoComponent;

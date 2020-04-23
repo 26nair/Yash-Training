@@ -1,0 +1,52 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import NumbersComponent from './NumbersComponent';     
+import NameComponent from './NameComponent';
+import * as serviceWorker from './serviceWorker';
+
+var Emp_Info ={
+              EmpId: "001",
+              EmpName: "Rahul",
+              EmpCompany: "Yash"
+             }
+
+          var NumList=[12,31,22,54,16,29,41,8,34,89];
+ReactDOM.render(<NumbersComponent numberlist={NumList}/>,document.getElementById('root')
+);
+
+
+serviceWorker.unregister();
+
+
+
+
+
+
+
+
+
+import React from 'react';
+class NumbersComponent extends React.Component{
+
+    render(){
+       
+        return(
+        <div>
+            {this.props.numberlist.map(function(number){
+                if(number % 2==true){
+                return <p>ODD Numbers:{number}</p>
+            }else{
+                return <p>Even Numbers:{number}</p>
+            }
+            } 
+                
+            )}
+
+        </div>
+        )
+        
+    }
+}
+export default NumbersComponent;

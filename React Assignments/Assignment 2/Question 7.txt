@@ -1,0 +1,45 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import CounterComponent from './CounterComponent';
+import * as serviceWorker from './serviceWorker';
+
+
+
+ReactDOM.render(<CounterComponent/>,document.getElementById('root'));
+
+
+serviceWorker.unregister();
+
+
+
+
+
+import React from 'react';
+class CounterComponent extends React.Component{
+
+constructor(props){
+    super(props);
+this.state={
+    count:0
+}
+
+
+}
+
+    render(){
+
+        return(
+            <div>
+                <div class="count">
+                  <h3>Count:</h3>
+                  <h1>{this.state.count}</h1>
+               </div>
+                <button onClick={() => this.setState({ count: this.state.count + 1})}>Increase Count</button><br></br><br></br>
+                <button onClick={() => this.setState({ count: this.state.count - 1})}>Decrease Count</button>
+            </div>
+        )
+    }
+}
+export default CounterComponent;
